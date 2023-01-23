@@ -112,5 +112,5 @@ output "SNET_Id" {
 output vm_admin_passsword {
   description = "Login para usuário admin"
   value     = random_password.password.result
-  sensitive = false
+  sensitive = true
 }
