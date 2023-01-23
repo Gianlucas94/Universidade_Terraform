@@ -9,7 +9,6 @@ data "terraform_remote_state" "localstate" {
   }
 }
 
-
 resource "azurerm_network_interface" "NIC" {
   name                = "nic-VM02"
   location            = data.terraform_remote_state.localstate.outputs.RG_Location
