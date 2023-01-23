@@ -57,3 +57,8 @@ resource "azurerm_linux_virtual_machine" "VM" {
     version   = "latest"
   }
 }
+output vm_admin_passsword {
+  description = "Login para usuário admin"
+  value     = random_password.password.result
+  sensitive = true
+}
